@@ -1,4 +1,4 @@
-from flask import Flask,send_from_directory,render_template
+from flask import Flask,send_from_directory,render_template, request, redirect, session
 from flask import send_from_directory
 
 from flask_restful import Resource, Api
@@ -13,7 +13,7 @@ from package.room import Room, Rooms
 from package.procedure import Procedure, Procedures 
 from package.prescribes import Prescribes, Prescribe
 from package.undergoes import Undergoess, Undergoes
-
+import sqlite3
 import json
 import os
 
@@ -21,6 +21,7 @@ with open('config.json') as data_file:
     config = json.load(data_file)
 
 app = Flask(__name__, static_url_path='')
+app.secret_key = 'mysecretkey'
 api = Api(app)
 
 api.add_resource(Patients, '/patient')
@@ -53,6 +54,39 @@ def favicon():
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
+
+@app.route('/')
+def home():
+    if 'username' in session:
+        username = session['username']
+        return f'Logged in as {username}.'
+    else:
+        return redirect('/login')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        conn = sqlite3.connect('database.db')
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
+        user = cursor.fetchone()
+        conn.close()
+        
+        if user:
+            session['username'] = username
+            return redirect('/')
+        else:
+            return 'Invalid login credentials.'
+    else:
+        return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect('/')
 
 
 if __name__ == '__main__':

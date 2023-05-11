@@ -17,7 +17,6 @@ $(document).ready(function () {
             "processData": false,
             "data": JSON.stringify(data)
         }
-
         $.ajax(settings).done(function (response) {
             $('.modal.in').modal('hide')
             $.notify("Undergoes Added Successfully", { "status": "success" });
@@ -27,7 +26,6 @@ $(document).ready(function () {
         });
 
     }
-
     function getUndergoes() {
 
         var settings = {

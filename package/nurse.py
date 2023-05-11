@@ -9,8 +9,6 @@ class Nurses(Resource):
         nurses = conn.execute("SELECT * FROM nurse ORDER BY nur_date DESC").fetchall()
         return nurses
 
-
-
     def post(self):
         """Add the new nurse"""
 

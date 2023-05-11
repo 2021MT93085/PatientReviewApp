@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
     var table
-
-
     function addDoctor(data) {
 
         var settings = {

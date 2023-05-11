@@ -2,7 +2,6 @@ $(document).ready(function () {
 
     var table
 
-
     function addNurse(data) {
 
         var settings = {

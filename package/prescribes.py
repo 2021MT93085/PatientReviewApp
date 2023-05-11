@@ -12,10 +12,8 @@ class Prescribes(Resource):
         # prescribes = conn.execute("SELECT * from prescribes").fetchall()
         prescribes = conn.execute("SELECT prescribes.doc_id, doctor.doc_first_name, doctor.doc_last_name, prescribes.pat_id, patient.pat_first_name, patient.pat_last_name, prescribes.med_code, prescribes.p_date, prescribes.app_id, dose FROM prescribes INNER JOIN doctor ON prescribes.doc_id = doctor.doc_id INNER JOIN patient ON prescribes.pat_id = patient.pat_id").fetchall()
         return prescribes
-
     def post(self):
         """Api to add prescribes in the database"""
-
         prescribes = request.get_json(force=True)
         doc_id = prescribes['doc_id']
         pat_id = prescribes['pat_id']

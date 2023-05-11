@@ -3,7 +3,6 @@ $(document).ready(function () {
     var table
 
     function addPrescribes(data) {
-
         var settings = {
             "async": true,
             "crossDomain": true,

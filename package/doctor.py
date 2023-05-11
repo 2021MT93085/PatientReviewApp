@@ -5,7 +5,6 @@ class Doctors(Resource):
 
     def get(self):
         """Retrive list of all the doctor"""
-
         doctors = conn.execute("SELECT * FROM doctor ORDER BY doc_date DESC").fetchall()
         return doctors
 

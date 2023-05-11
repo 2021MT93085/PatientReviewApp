@@ -5,7 +5,6 @@ from package.model import conn
 
 class Medications(Resource):
     """This contain apis to carry out activity with all medicines"""
-
     def get(self):
         """Retrive all the medication and return in form of json"""
 

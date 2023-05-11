@@ -31,9 +31,7 @@
 
     // When ready display the offsidebar
     $('.offsidebar.hide').removeClass('hide');
-
   }); // doc ready
-
 
 })(window, document, window.jQuery);
 

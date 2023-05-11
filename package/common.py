@@ -4,7 +4,6 @@ from package.model import conn
 
 class Common(Resource):
     """This contain common api ie noe related to the specific module"""
-
     def get(self):
         """Retrive the patient, doctor, appointment, medication count for the dashboard page"""
 

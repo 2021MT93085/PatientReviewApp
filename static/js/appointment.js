@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
     var table
-
-
     function addAppointment(data) {
 
         var settings = {
@@ -27,9 +25,7 @@ $(document).ready(function () {
             $('#datatable4 tbody').empty(); // empty in case the columns change
             getAppointment()
         });
-
     }
-
     function deleteAppointment(id) {
         var settings = {
             "async": true,
@@ -57,7 +53,6 @@ $(document).ready(function () {
             $('#datatable4 tbody').empty(); // empty in case the columns change
             getAppointment()
         });
-
 
        });
 

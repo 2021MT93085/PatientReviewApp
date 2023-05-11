@@ -8,7 +8,6 @@ class Appointments(Resource):
 
     def get(self):
         """Retrive all the appointment and return in form of json"""
-
         appointment = conn.execute("SELECT p.*,d.*,a.* from appointment a LEFT JOIN patient p ON a.pat_id = p.pat_id LEFT JOIN doctor d ON a.doc_id = d.doc_id ORDER BY appointment_date DESC").fetchall()
         return appointment
 

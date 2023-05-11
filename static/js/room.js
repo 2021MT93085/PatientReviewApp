@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
     var table
-
-
     function addRoom(data) {
 
         var settings = {

@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     var table
-
     function addProcedure(data) {
 
         var settings = {

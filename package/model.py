@@ -5,9 +5,6 @@ with open('config.json') as data_file:
 
 conn=sqlite3.connect(config['database'], check_same_thread=False)
 conn.execute('pragma foreign_keys=ON')
-
-
-
 def dict_factory(cursor, row):
     """This is a function use to format the json when retirve from the  mysql database"""
     d = {}

@@ -5,7 +5,6 @@ from package.model import conn
 
 class Departments(Resource):
     """This contain apis to carry out activity with all appiontments"""
-
     def get(self):
         """Retrive all the department and return in form of json"""
 

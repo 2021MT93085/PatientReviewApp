@@ -23,8 +23,6 @@ class Procedures(Resource):
         conn.commit()
         return procedure
 
-
-
 class Procedure(Resource):
     """This contain all api doing activity with single procedure"""
 

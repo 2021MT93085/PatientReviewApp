@@ -24,5 +24,4 @@ $(document).ready(function () {
     $('#undergoescount').text(response.undergoes)
   });
 
-
 })

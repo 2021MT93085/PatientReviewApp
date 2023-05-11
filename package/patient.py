@@ -11,7 +11,6 @@ class Patients(Resource):
         return patients
 
 
-
     def post(self):
         """api to add the patient in the database"""
 
