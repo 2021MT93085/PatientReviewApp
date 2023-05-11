@@ -6,7 +6,13 @@ Rajesh Chakravarthy **(BITS ID : 2021MT93085)**
 
 **Project Statement:**
 
-Patient Review System is a tool which can be used to store, retrieve information about the different patients, their procedures, doctors, etc. Not only it stores information but also provides different methods to retrieve information. For e.g., getting the details of a patient(his procedures, address, appointments, phone number, etc.). This makes the retrieval of information quick, which not only saves time but also helps in smooth functioning of the hospital.
+The Patient Review System is a web-based tool that facilitates the storage and retrieval of patient, doctor, and nurse information. It enables hospitals to manage their operations more efficiently by providing a quick and easy way to access information about patients, their procedures, doctors, and more.
+
+The system's frontend is built using HTML, CSS, and Bootstrap, while the backend is built using Flask, SQLite database, JavaScript, and Python.
+
+The system offers a range of functional requirements, including the ability to access patient, doctor, and nurse data, view appointment details, check room availability, view medication records, view department details, view patient prescriptions, and access procedure information. Additionally, the system allows users to perform searches within different categories.
+
+Overall, the Patient Review System is a valuable tool for hospitals to manage their operations more efficiently and to provide better patient care.
 
 **Introduction:**
 
@@ -18,18 +24,11 @@ Patient Review System handles the basic management of the patient and doctor dat
 
 **Functional Requirements:**
 
-* Patient's, Doctor's, Nurse’s data can be accessed in their respective tables.
-
-* Appointment id can be used to identify the patient's appointment with the doctor.
-
-* Rooms are displayed with their availability status.
-
-* Medication has the records of medicines available with their brand and description.
-
-* Departments in the hospital can be viewed with their head of department.
-
-* The Prescription that a patient is given can be viewed with medication code which the doctor gave at the time along with their appointment id.
-
-* The procedure which the patient undergoes along with the doctor, patient present at the time in the particular room can be accessed.
-
-* Searches can be made within the department, doctor, nurse, medication, room, etc.
+* The system enables users to access patient, doctor, and nurse data through their respective tables.
+* Appointments can be identified using their unique appointment ID.
+* Room availability can be checked by viewing the displayed status.
+* Medication records include information about the available medicines, their brands, and descriptions.
+* The head of each department can be viewed through the system's department details.
+* Patient prescriptions can be viewed, including the medication code provided by the doctor at the time of the appointment.
+* Procedures performed on a patient, including the doctor and patients present during the procedure in a particular room, can be    accessed through the system.
+* Users can search for information within various categories, including departments, doctors, nurses, medication, and rooms.
